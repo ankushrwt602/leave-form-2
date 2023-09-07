@@ -1,0 +1,893 @@
+body{
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*Header*/
+
+header#header {
+  background: #001529;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-list table {
+  display: flex;
+  color: #fff;
+}
+
+.nav-list table tr {
+  padding: 15px 20px;
+}
+
+.nav-list table tr th {
+  padding: 5px;
+  font-size: 18px;
+}
+
+.logo {
+  width: 80%;
+}
+
+.nav-list {
+  width: 20%;
+}
+/*Header*/
+
+/*Sidebar*/
+.sidebar {
+  background: #001529;
+  position: fixed;
+  top: 13%;
+  width: 20%;
+  height: 100%;
+}
+
+li.ant-menu-item {
+  font-size: 20px;
+  padding: 30px;
+}
+
+button.ant-btn.css-dev-only-do-not-override-byeoj0.ant-btn-primary {
+  display: none;
+}
+
+ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-dark.css-dev-only-do-not-override-byeoj0 {
+  padding-top: 50px;
+}
+/*Sidebar*/
+
+/*Login Page*/
+.login_page{
+  overflow: hidden;
+  padding-top: 5%;
+}
+
+.login_form {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px;
+  margin: 15px 50px;
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.login_form h1 {
+  color: #2f2f94;
+  padding: 20px 0 40px;
+  text-align: center;
+}
+
+.ant-form-item-control-input-content button {
+  background: #2f2f94;
+  border: 2px solid #2f2f94;
+  color: #fff;
+  padding: 10px 35px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.ant-form-item-control-input-content button:hover {
+  color: #2f2f94;
+  background: #fff;
+}
+
+:where(.css-dev-only-do-not-override-byeoj0).ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #2f2f94;
+  border-color: #2f2f94;
+}
+
+.ant-form-item.css-dev-only-do-not-override-byeoj0 {
+  margin-bottom: 30px;
+}
+
+:where(.css-dev-only-do-not-override-byeoj0).ant-col-8 {
+  max-width: 25.333333%;
+}
+
+/* Apply Leave */
+section.apply_leave {
+  padding-top: 150px;
+  overflow: hidden;
+  padding-right: 100px;
+  background: #ebeff3;
+  padding-left: 380px;
+  padding-bottom: 80px;
+}
+
+:where(.css-dev-only-do-not-override-byeoj0).ant-form-item .ant-form-item-control-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 0px;
+}
+
+.applybtn {
+  text-align: center;
+}
+.leaveForm  .ant-col.ant-col-15.ant-form-item-label.css-dev-only-do-not-override-byeoj0 {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  text-align: left;
+}
+.leaveForm  .ant-row.ant-form-item-row.css-dev-only-do-not-override-byeoj0 {
+  display: block;
+}
+.leaveForm  .ant-picker.ant-picker-default.css-dev-only-do-not-override-byeoj0 {
+  width: 100%;
+}
+.leaveForm  .form-calender {
+  display: flex;
+  width: 100%;
+}
+.leaveForm .ant-form-item.css-dev-only-do-not-override-byeoj0 {
+  width: 100%;
+}
+.apply_leave .ant-form.ant-form-horizontal.css-dev-only-do-not-override-byeoj0 {
+  padding: 40px;
+  box-shadow: 0 0 5px #e5dada;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.leaveForm :where(.css-dev-only-do-not-override-byeoj0).ant-input-number{
+  height: 40px;
+  width: 100%;
+}
+.leaveForm .ant-picker-input input {
+  height: 30px !important;
+}
+.leaveForm .ant-form-item-control-input-content input {
+  height: 40px;
+}
+.leaveForm :where(.css-dev-only-do-not-override-byeoj0).ant-select-single:not(.ant-select-customize-input) .ant-select-selector{
+  height: 40px;
+}
+.leaveForm button.ant-btn.css-dev-only-do-not-override-byeoj0.ant-btn-default {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.leaveForm  .ant-form-item-control-input-content input#user_textarea {
+  height: 110px;
+}
+.leaveForm  .ant-picker.ant-picker-status-success.css-dev-only-do-not-override-byeoj0 {
+  width: 100%;
+}
+.leaveForm  .ant-select-selector {
+  align-items: center;
+}
+.leaveForm :where(.css-dev-only-do-not-override-byeoj0).ant-form-item .ant-form-item-label >label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+  display: none;
+}
+.leaveForm  label.ant-form-item-required {
+  font-weight: 600;
+  color: #323232 !important;
+}
+.leaveForm .marg-left {
+  margin-left: 10px;
+}
+.buttons .ant-form-item.css-dev-only-do-not-override-byeoj0 {
+  flex: 0 0 16%;
+} 
+.marg-right {
+  margin-right: 20px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.cancel {
+  background: none !important;
+  color: #5c5b5b !important;
+  font-weight: 500;
+  border: 1px solid grey !important;
+}
+
+/*Dashboard Employee*/
+.employee_profile {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.profile-picture img {
+  width: 30%;
+  border-radius: 50%;
+}
+
+section.pie-chart {
+  padding-left: 380px;
+  padding-top: 150px;
+  padding-right: 100px;
+  background: #ebeff3;
+  padding-bottom: 80px;
+}
+
+.employee-heading {
+  margin-bottom: 30px;
+}
+
+.custom-employee-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+}
+
+.inner-info {
+  width: 80%;
+}
+
+.icon {
+  padding: 20px;
+  color: #001529;
+  font-size: 20px;
+}
+
+.donutchart {
+  padding-bottom: 50px;
+}
+
+.chartset-up {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px 40px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  text-align: center;
+}
+
+.lastest-leave-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.lastest-leave-table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 15px;
+}
+
+.lastest-leave-table th{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 20px;
+}
+
+.lastest-leave-table tr:nth-child(even) {
+  background-color: #ebeff3;
+}
+
+.lastest-leave-table {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/*Admin Dashboard*/
+.admin_profile {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.admin-picture img {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.admin-chart {
+  padding-left: 380px;
+  padding-top: 150px;
+  padding-right: 100px;
+  background: #ebeff3;
+  padding-bottom: 80px;
+}
+
+.admin-heading {
+  margin-bottom: 30px;
+}
+
+.custom-admin-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+}
+
+.inner-info {
+  width: 80%;
+}
+
+.icon {
+  padding: 20px;
+  color: #001529;
+  font-size: 20px;
+}
+
+.admin-lastest-leave-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.admin-lastest-leave-table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 15px;
+}
+
+.admin-lastest-leave-table th{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 20px;
+}
+
+.admin-lastest-leave-table tr:nth-child(even) {
+  background-color: #ebeff3;
+}
+
+.admin-lastest-leave-table {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.admin-lastest-leave-table button {
+  border: 2px solid #001529;
+  background: #001529;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.admin-lastest-leave-table button:hover {
+  border: 2px solid #001529;
+  background: #fff;
+  color: #001529;
+}
+
+.admin-lastest-leave-table tr:nth-child(even) button:hover {
+  background-color: #ebeff3;
+}
+
+/*Admin Employee section*/
+.admin-employee-section {
+  padding-left: 300px;
+  padding-top: 150px;
+  padding-right: 30px;
+  background: #ebeff3;
+  padding-bottom: 80px;
+}
+.admin-employee-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.admin-employee-table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 15px;
+}
+
+.admin-employee-table th{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 20px;
+}
+
+.admin-employee-table tr:nth-child(even) {
+  background-color: #ebeff3;
+}
+
+.admin-employee-table {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.admin-employee-table button {
+  border: 2px solid #001529;
+  background: #001529;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 1;
+  transition: 0.4s ease all;
+}
+section.admin-leave-types {
+  padding-left: 380px;
+  padding-top: 130px;
+  padding-right: 100px;
+} 
+
+.admin-employee-table button:hover {
+  border: 2px solid #001529;
+  background: #fff;
+  color: #001529;
+}
+
+.admin-employee-table tr:nth-child(even) button:hover {
+  background-color: #ebeff3;
+}
+
+.add-employye-btn button {
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: #001529;
+  color: #fff;
+  border: 2px solid #001529;
+}
+
+.add-employye-btn button:hover {
+  background: #ebeff3;
+  color: #001529;
+}
+
+/* Add Employee Section */
+.add_employee {
+  padding-top: 150px;
+  overflow: hidden;
+  padding-right: 100px;
+  background: #ebeff3;
+  padding-left: 380px;
+  padding-bottom: 80px;
+}
+.add_employee .add_employee_inner_frame .ant-col.ant-col-4.ant-form-item-label.css-dev-only-do-not-override-byeoj0 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.add_employee .ant-col.ant-col-14.ant-form-item-control.css-dev-only-do-not-override-byeoj0 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.add_employee .ant-col.ant-col-4.ant-form-item-label.css-dev-only-do-not-override-byeoj0 {
+  text-align: left;
+}
+.add_employee .ant-picker.css-dev-only-do-not-override-byeoj0 {
+  width: 100%;
+}
+.add_employee .ant-select-selector {
+  height: 38px !important;
+}
+.add_employee input {
+  height: 38px !important;
+}
+.add_employee .ant-picker.css-dev-only-do-not-override-byeoj0 {
+  height: 38px;
+}
+.add_employee .ant-form.ant-form-horizontal.css-dev-only-do-not-override-byeoj0 {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+}
+.employye_credentials input#user_password {
+  padding-left: 11px;
+}
+.employye_credentials span.ant-input-affix-wrapper.ant-input-password.ant-input-affix-wrapper-status-success.css-dev-only-do-not-override-byeoj0{
+  padding: 0 !important;
+}
+.employye_credentials .ant-input-suffix {
+  background: #e8f0fe;
+  margin: 0 !important;
+  padding-right: 11px;
+}
+.employye_login_credentials h2 {
+  font-size: 24px;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+button.ant-btn.css-dev-only-do-not-override-byeoj0.ant-btn-default.marg-right {
+  font-size: 14px;
+  height: 100%;
+  padding: 10px 45px;
+}
+button.ant-btn.css-dev-only-do-not-override-byeoj0.ant-btn-default.cancel{
+  font-size: 14px;
+  height: 100%;
+  padding: 10px 45px;
+}
+.employye_credentials {
+  margin-bottom: 30px;
+}
+.add-employye-btn a{
+  font-size: 14px;
+  height: 100%;
+  padding: 10px 45px;
+  text-decoration: none;
+  color: #fff;
+  background: #001529;
+  border: 2px solid #001529;
+  border-radius: 5px;
+}
+.employee-sec-heading h2 {
+  font-size: 30px;
+  margin: 0;
+}
+.add-employye-btn {
+  text-align: right;
+} 
+.inner-admin-employee-frame .row {
+  margin-bottom: 50px;
+}
+/*Employee Leave History*/
+
+.leave-history-frame {
+  padding-left: 380px;
+  padding-top: 150px;
+  padding-right: 100px;
+  background: #ebeff3;
+  padding-bottom: 190px;
+}
+
+section.leave-history-frame h2 {
+  padding: 20px 0;
+}
+
+.employee-leave-history table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.employee-leave-history table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 15px;
+}
+
+.employee-leave-history th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 20px;
+}
+
+.employee-leave-history tr:nth-child(even) {
+  background-color: #ebeff3;
+}
+
+.employee-leave-history {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+/*Manage Leave Type*/
+
+.manage_leave_admin {
+  padding-top: 150px;
+  overflow: hidden;
+  padding-right: 30px;
+  background: #ebeff3;
+  padding-left: 300px;
+  padding-bottom: 80px;
+}
+.manage_leave_admin .ant-col.ant-col-16.ant-col-offset-8.ant-form-item-control.css-dev-only-do-not-override-byeoj0 {
+  margin: 0;
+}
+.manage_leave_admin .ant-col.ant-col-8.ant-form-item-label.css-dev-only-do-not-override-byeoj0 {
+  text-align: left;
+  flex: 0 0 100%;
+}
+.admin-l-manage h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+button.close-circle-btn {
+  border: none;
+  background: none;
+  color: red !important;
+}
+button.check-circle-btn {
+  border: none;
+  background: none;
+  color: #04ce04 !important;
+}
+.manage_leave_type_table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.manage_leave_type_table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 15px;
+}
+.ant-form-item-control-input-content .admin-m-l{
+  padding: 5px 20px !important;
+  border-radius: 5px;
+  background: #001529;
+  color: #fff;
+  border: 2px solid #001529;
+  height: 40px !important;
+}
+.ant-select-selector {
+  height: 40px !IMPORTANT;
+  DISPLAY: FLEX;
+  ALIGN-ITEMS: CENTER;
+}
+button.modal-btn {
+  background: #001529;
+  border: 2px solid #001529;
+  padding: 10px 13px;
+  border-radius: 5px;
+}
+.manage_leave_type_table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 20px;
+}
+
+.manage_leave_type_table tr:nth-child(even) {
+  background-color: #ebeff3;
+}
+
+.manage_leave_type_table {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.manage_leave_type_table button {
+  color: #fff;
+}
+
+.manage_leave_type_table button:hover {
+  background: #ebeff3;
+  color: #001529;
+}
+
+.ant-form-item-control-input-content button {
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: #001529;
+  color: #fff;
+  border: 2px solid #001529;
+  height: 50px;
+}
+
+.ant-form-item-control-input-content button:hover {
+  background: #ebeff3;
+  color: #001529 !important;
+  border: 2px solid #001529 !important;
+}
+/* Admin Leave Types */
+.admin-leave-types {
+  padding-left: 380px;
+  padding-top: 150px;
+  padding-right: 100px;
+  background: #ebeff3;
+  padding-bottom: 80px;
+}
+
+.admin-leave-types-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.admin-leave-types-table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 15px;
+}
+
+.admin-leave-types-table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 20px;
+}
+
+.admin-leave-types-table tr:nth-child(even) {
+  background-color: #ebeff3;
+}
+
+.admin-leave-types-table {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.admin-leave-types-table button {
+  border: 2px solid #001529;
+  background: #001529;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.admin-leave-types-table button:hover {
+  border: 2px solid #001529;
+  background: #fff;
+  color: #001529;
+}
+
+.admin-leave-types-table tr:nth-child(even) button:hover {
+  background-color: #ebeff3;
+}
+
+.admin-leave-btn {
+  text-align: center;
+  padding: 30px;
+}
+
+.admin-leave-btn a {
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: #001529;
+  color: #fff;
+  border: 2px solid #001529;
+  text-decoration: none;
+}
+
+.admin-leave-btn a:hover {
+  background: #ebeff3;
+  color: #001529;
+}
+
+/*Admin Add Leave Types */
+
+.add_new_leave {
+  padding-left: 380px;
+  padding-top: 150px;
+  padding-right: 100px;
+  background: #ebeff3;
+  padding-bottom: 80px;
+}
+
+
+/*Manage Admin Section*/
+.manage-admin {
+  padding-left: 380px;
+  padding-top: 150px;
+  padding-right: 100px;
+  background: #ebeff3;
+  padding-bottom: 260px;
+}
+
+.admin-mange-admin-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.admin-mange-admin-table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 15px;
+}
+
+.admin-mange-admin-table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 20px;
+}
+
+.admin-mange-admin-table tr:nth-child(even) {
+  background-color: #ebeff3;
+}
+
+.admin-mange-admin-table {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.admin-mange-admin-table button {
+  border: 2px solid #001529;
+  background: #001529;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.admin-mange-admin-table button:hover {
+  border: 2px solid #001529;
+  background: #fff;
+  color: #001529;
+}
+
+.admin-mange-admin-table tr:nth-child(even) button:hover {
+  background-color: #ebeff3;
+}
+
+.add-mange-admin-btn {
+  text-align: center;
+  padding: 30px;
+}
+
+.add-mange-admin-btn a {
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: #001529;
+  color: #fff;
+  border: 2px solid #001529;
+  text-decoration: none;
+}
+
+.add-mange-admin-btn a:hover {
+  background: #ebeff3;
+  color: #001529;
+}
+
+
+/*Add Manage Admin*/
+
+.add_new_admin {
+  padding-left: 380px;
+  padding-top: 150px;
+  padding-right: 100px;
+  background: #ebeff3;
+  padding-bottom: 80px;
+}
