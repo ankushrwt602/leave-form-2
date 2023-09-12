@@ -35,7 +35,7 @@ const AdminEmployeeSection = () => {
             <div className="admin-employee-table">
               <table>
                 <tr>
-                  <th>Employee ID</th>
+                  <th>ID</th>
                   <th>Employee Name</th>
                   <th>Department</th>
                   <th>Joined Date</th>

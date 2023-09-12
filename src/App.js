@@ -13,7 +13,7 @@ import AdminManageLeave from "./Component/AdminManageLeave";
 import ManageAdmin from "./Component/ManageAdmin";
 import AddAdminManage from "./Component/AddAdminManage";
 import EmployeeLeaveHistory from "./Component/EmployeeLeaveHistory";
-import EmployeeUpcomingLeaveCalendar from "./Component/EmployeeUpcomingLeaveCalendar";
+// import AdminCalendarComponent from "./Component/AdminCalendarComponent";
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
       <Route path="/main/manage-admin" element={<ManageAdmin/>}/>
       <Route path="/main/add-manage-admin" element={<AddAdminManage/>}/>
       <Route path="/main/employee-leave-history" element={<EmployeeLeaveHistory/>}/>
-      <Route path="/main/employeeupcomingleavecalendar" element={<EmployeeUpcomingLeaveCalendar/>}/>
+      {/* <Route path="/main/manage-calendar" element={<AdminCalendarComponent/>}/> */}
     </Routes>
   </Router>
   </>

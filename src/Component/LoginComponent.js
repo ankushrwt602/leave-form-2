@@ -4,6 +4,7 @@ import { Button, Checkbox, Form, Input, Select } from "antd";
 import login_img from "../Assets/Images/login_img.gif";
 import { useNavigate } from "react-router-dom";
 import { LoginDropdown  , urlAfterLogin} from "../constant/constant";
+import axios from "axios";
 const {Option} = Select;
 
 const LoginComponent = () => {
@@ -21,12 +22,31 @@ const LoginComponent = () => {
     // }
     localStorage.setItem("LoginType", values.login_type);
     navigate(`${urlAfterLogin[values.login_type]}?${queryParams}`)
-  
-
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
+
+  function loginonsubmit(e){
+    e.preventDefault();
+    let obj = {
+      "username" : "vaishali@gmail.com",
+      "password" : 123456,
+      "login_type" :1
+      }
+      console.log(obj,'>>>>>>>>>>>>helloooo')
+
+     axios
+     .post("http://localhost:5000/api/users/login",obj)
+     .then(response => {
+      // Handle successful response
+      console.log(response,'<<<<<<<<<<pass');
+    })
+    .catch(error => {
+      console.error('AxiosError:', error);
+    });
+}
+
   return (
     <>
       <section className="login_page">
@@ -131,7 +151,7 @@ const LoginComponent = () => {
                       span: 16,
                     }}
                   >
-                    <button type="primary" htmlType="submit">
+                    <button type="primary" htmlType="submit" onClick={loginonsubmit}>
                       Login
                     </button>
                   </Form.Item>

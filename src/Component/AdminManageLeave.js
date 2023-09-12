@@ -62,17 +62,21 @@ const AdminManagerLeave = () => {
       <Layout />
       <section className="manage_leave_admin">
         <div className="container">
-          <div className="admin-l-manage">
+          <div className="row">
+            <div className="col-lg-6 col-md-6 col-sm-12">
+            <div className="admin-l-manage">
             <h2>Manage Leaves</h2>
           </div>
-          <Form
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12">
+            <Form
             {...layout}
             ref={formRef}
             name="control-ref"
             onFinish={onFinish}
           >
             <div className="row">
-              <div className="col-lg-6 col-md-6 col-sm-12">
+              <div className="col-lg-8 col-md-8 col-sm-12">
                 <Form.Item
                   name="adminleave"
                   label="Select Leave"
@@ -94,13 +98,17 @@ const AdminManagerLeave = () => {
                   </Select>
                 </Form.Item>
               </div>
-              <div className="col-lg-6 col-md-6 col-sm-12">
+              <div className="col-lg-4 col-md-4 col-sm-12">
                 <Form.Item {...tailLayout}>
                   <Button className="admin-m-l" htmlType="submit">Submit</Button>
                 </Form.Item>
               </div>
             </div>
           </Form>
+            </div>
+          </div>
+
+
           <div className="manage_leave_type_table">
             <table>
               <tr>

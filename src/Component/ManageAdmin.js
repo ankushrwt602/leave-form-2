@@ -2,7 +2,7 @@ import Layout from "../Component/layoutComponent";
 import React from "react";
 import { useState } from "react";
 import { Modal } from "antd";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const ManageAdmin = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,8 +21,17 @@ const ManageAdmin = () => {
       <section className="manage-admin">
         <div className="container">
           <div className="inner-admin-manage-frame">
-            <div className="add-mange-admin-btn">
-              <Link to="/main/add-manage-admin">Add New Admin</Link>
+            <div className="row">
+              <div className="col-lg-6 col-md-6 col-sm-12">
+                <div className="employee-sec-heading">
+                  <h2>Admin Leave</h2>
+                </div>
+              </div>
+              <div className="col-lg-6 col-md-6 col-sm-12">
+                <div className="add-mange-admin-btn">
+                  <Link to="/main/add-manage-admin">Add New Admin</Link>
+                </div>
+              </div>
             </div>
             <div className="admin-mange-admin-table">
               <table>
@@ -61,7 +70,9 @@ const ManageAdmin = () => {
                   <td>nimit@imagitrue.com</td>
                   <td>23 Aug 2023</td>
                   <td>
-                    <button type="primary" onClick={showModal}>View details</button>
+                    <button type="primary" onClick={showModal}>
+                      View details
+                    </button>
                   </td>
                 </tr>
               </table>

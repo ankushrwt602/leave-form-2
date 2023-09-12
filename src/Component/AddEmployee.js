@@ -12,6 +12,7 @@ function AddEmployee() {
       <section className="add_employee">
         <div className="container">
           <div className="add_employee_inner_frame">
+            <h2>Add Employee</h2>
             <Form
               labelCol={{
                 span: 4,

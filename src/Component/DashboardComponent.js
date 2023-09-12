@@ -5,10 +5,9 @@ import EmployeeProfile from ".././Assets/Images/employee-profile.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { faHourglassEnd } from "@fortawesome/free-solid-svg-icons";
-import { faHourglass } from "@fortawesome/free-solid-svg-icons";
 import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
-import { useLocation } from 'react-router-dom';
-import LayoutComponent from "../Component/layoutComponent";
+import { useLocation } from "react-router-dom";
+import { faSquareXmark } from "@fortawesome/free-solid-svg-icons";
 
 function DashboardComponent() {
   const location = useLocation();
@@ -16,24 +15,34 @@ function DashboardComponent() {
   const loginType = queryParams.get("LoginType");
   const [series, setSeries] = useState([70]);
 
-  const options = {
-    chart: {
-      height: 350,
-      type: "radialBar",
-    },
-    plotOptions: {
-      radialBar: {
-        hollow: {
-          size: "70%",
-        },
+  const [chartData, setChartData] = useState({
+    series: [44, 55, 13, 43, 22],
+    options: {
+      chart: {
+        width: 380,
+        type: "pie",
       },
+      labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+        },
+      ],
     },
-    labels: ["Total Leave"],
-  };
+  });
 
   return (
     <>
-      <Layout loginType={loginType}/>
+      <Layout loginType={loginType} />
+
       <section className="pie-chart">
         <div className="container">
           <div className="inner-pie-chart">
@@ -98,7 +107,7 @@ function DashboardComponent() {
                       <span>Rejected Leaves</span>
                     </div>
                     <div className="icon">
-                      <FontAwesomeIcon icon={faHourglass} />
+                      <FontAwesomeIcon icon={faSquareXmark} />
                     </div>
                   </div>
                 </div>
@@ -107,26 +116,26 @@ function DashboardComponent() {
             <div className="donutchart">
               <div className="appsetup">
                 <div className="row">
-                  <div className="chartset-up col-lg-5 col-md-6 col-sm-12">
+                  <div className="chartset-up col-lg-6 col-md-6 col-sm-12">
                     <h2>Total Leaves</h2>
                     <div id="chart">
                       <ReactApexChart
-                        options={options}
-                        series={series}
-                        type="radialBar"
-                        height={350}
+                        options={chartData.options}
+                        series={chartData.series}
+                        type="pie"
+                        width={380}
                       />
                     </div>
                   </div>
 
-                  <div className="chartset-up col-lg-5 col-md-6 col-sm-12">
+                  <div className="chartset-up col-lg-6 col-md-6 col-sm-12">
                     <h2>Remaining Leaves</h2>
                     <div id="chart">
                       <ReactApexChart
-                        options={options}
-                        series={series}
-                        type="radialBar"
-                        height={350}
+                        options={chartData.options}
+                        series={chartData.series}
+                        type="pie"
+                        width={380}
                       />
                     </div>
                   </div>
@@ -138,57 +147,56 @@ function DashboardComponent() {
             </div>
             <div className="lastest-leave-table">
             <table>
-              <tr>
-                <th>Employee Name</th>
-                <th>Leave Type</th>
-                <th>Applied Leave</th>
-                <th>HOD Status</th>
-                <th>Reg. Status</th>
-              </tr>
-              <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td>Germany</td>
-                <td>Approved</td>
-                <td>Approved</td>
-              </tr>
-              <tr>
-                <td>Centro comercial Moctezuma</td>
-                <td>Francisco Chang</td>
-                <td>Mexico</td>
-                <td>Approved</td>
-                <td>Approved</td>
-              </tr>
-              <tr>
-                <td>Ernst Handel</td>
-                <td>Roland Mendel</td>
-                <td>Austria</td>
-                <td>Approved</td>
-                <td>Approved</td>
-              </tr>
-              <tr>
-                <td>Island Trading</td>
-                <td>Helen Bennett</td>
-                <td>UK</td>
-                <td>Approved</td>
-                <td>Approved</td>
-              </tr>
-              <tr>
-                <td>Laughing Bacchus Winecellars</td>
-                <td>Yoshi Tannamuri</td>
-                <td>Canada</td>
-                <td>Approved</td>
-                <td>Approved</td>
-              </tr>
-              <tr>
-                <td>Magazzini Alimentari Riuniti</td>
-                <td>Giovanni Rovelli</td>
-                <td>Italy</td>
-                <td>Approved</td>
-                <td>Approved</td>
-              </tr>
-            </table>
-          </div>
+                <tr>
+                  <th>Leave Type</th>
+                  <th>Condition</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th>Applied</th>
+                  <th>Admin's Remark</th>
+                </tr>
+                <tr>
+                  <td>Medical Leave</td>
+                  <td>fever</td>
+                  <td>23 Aug 2023</td>
+                  <td>25 Aug 2023</td>
+                  <td>21 Aug 2023 2:00:12</td>
+                  <td>Pending</td>
+                </tr>
+                <tr>
+                  <td>Medical Leave</td>
+                  <td>fever</td>
+                  <td>23 Aug 2023</td>
+                  <td>25 Aug 2023</td>
+                  <td>21 Aug 2023 2:00:12</td>
+                  <td>Pending</td>
+                </tr>
+                <tr>
+                  <td>Medical Leave</td>
+                  <td>fever</td>
+                  <td>23 Aug 2023</td>
+                  <td>25 Aug 2023</td>
+                  <td>21 Aug 2023 2:00:12</td>
+                  <td>Pending</td>
+                </tr>
+                <tr>
+                  <td>Medical Leave</td>
+                  <td>fever</td>
+                  <td>23 Aug 2023</td>
+                  <td>25 Aug 2023</td>
+                  <td>21 Aug 2023 2:00:12</td>
+                  <td>Pending</td>
+                </tr>
+                <tr>
+                  <td>Medical Leave</td>
+                  <td>fever</td>
+                  <td>23 Aug 2023</td>
+                  <td>25 Aug 2023</td>
+                  <td>21 Aug 2023 2:00:12</td>
+                  <td>Pending</td>
+                </tr>
+        </table>
+            </div>
           </div>
         </div>
       </section>

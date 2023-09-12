@@ -11,7 +11,7 @@ function AddAdminManage() {
         <div className="container">
           <div className="add_new_admin_inner_frame">
             <div className="add_new_admin_heading">
-              <h4>Please fill up the form in order to add new admin</h4>
+              <h2>Please fill up the form in order to add new admin</h2>
             </div>
             <Form
               labelCol={{

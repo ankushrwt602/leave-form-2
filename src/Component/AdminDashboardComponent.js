@@ -4,7 +4,8 @@ import AdminProfile from "../Assets/Images/imagitrue-CEO.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { faHourglassEnd } from "@fortawesome/free-solid-svg-icons";
-import { faHourglass } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
+import { faSquareXmark } from "@fortawesome/free-solid-svg-icons";
 import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from 'react-router-dom';
 
@@ -57,7 +58,7 @@ function AdminDashboardComponent() {
                       <span>Available Leaves Type</span>
                     </div>
                     <div className="icon">
-                      <FontAwesomeIcon icon={faSquareCheck} />
+                      <FontAwesomeIcon icon={faCalendarCheck} />
                     </div>
                   </div>
                 </div>
@@ -69,7 +70,7 @@ function AdminDashboardComponent() {
                       <span>Approved Leaves</span>
                     </div>
                     <div className="icon">
-                      <FontAwesomeIcon icon={faHourglassEnd} />
+                      <FontAwesomeIcon icon={faSquareCheck} />
                     </div>
                   </div>
                 </div>
@@ -81,7 +82,7 @@ function AdminDashboardComponent() {
                       <span>Pending Leaves</span>
                     </div>
                     <div className="icon">
-                      <FontAwesomeIcon icon={faHourglass} />
+                      <FontAwesomeIcon icon={faHourglassEnd} />
                     </div>
                   </div>
                 </div>
@@ -93,7 +94,7 @@ function AdminDashboardComponent() {
                       <span>Rejected Leaves</span>
                     </div>
                     <div className="icon">
-                      <FontAwesomeIcon icon={faHourglass} />
+                      <FontAwesomeIcon icon={faSquareXmark} />
                     </div>
                   </div>
                 </div>
@@ -106,7 +107,7 @@ function AdminDashboardComponent() {
             <div className="admin-lastest-leave-table">
               <table>
                 <tr>
-                  <th>Employee ID</th>
+                  <th>ID</th>
                   <th>Employee Name</th>
                   <th>Leave Type</th>
                   <th>Applied Leave</th>

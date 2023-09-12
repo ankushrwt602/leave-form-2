@@ -18,7 +18,7 @@ function AdminAddLeave () {
         <div className="container">
           <div className="add_new_leave_inner_frame">
                <div className="add_new_leave_heading">
-                   <h4>Please fill up the form in order to add new leave type</h4>
+                   <h2>Please fill up the form in order to add new leave type</h2>
                </div>
             <Form
               labelCol={{

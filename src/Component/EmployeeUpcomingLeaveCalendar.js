@@ -64,15 +64,17 @@ const getListData = (value) => {
   }
   return listData || [];
 };
+
+<>
+<Layout/>
+</>
+
 const getMonthData = (value) => {
   if (value.month() === 8) {
     return 1394;
   }
 };
 
-<>
-<Layout/>
-</>
 const EmployeeUpcomingLeaveCalendar = () => {
   const monthCellRender = (value) => {
     const num = getMonthData(value);

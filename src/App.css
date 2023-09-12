@@ -151,7 +151,7 @@ section.apply_leave {
   padding-right: 100px;
   background: #ebeff3;
   padding-left: 380px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 }
 
 :where(.css-dev-only-do-not-override-byeoj0).ant-form-item .ant-form-item-control-input {
@@ -220,8 +220,13 @@ section.apply_leave {
   align-items: center;
 }
 .leaveForm :where(.css-dev-only-do-not-override-byeoj0).ant-form-item .ant-form-item-label >label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
-  display: none;
+  display: none !important;
 }
+
+:where(.css-dev-only-do-not-override-byeoj0).ant-menu-dark .ant-menu-item-selected, :where(.css-dev-only-do-not-override-byeoj0).ant-menu-dark>.ant-menu .ant-menu-item-selected {
+  background-color: #001529 !important;
+}
+
 .leaveForm  label.ant-form-item-required {
   font-weight: 600;
   color: #323232 !important;
@@ -267,7 +272,7 @@ section.pie-chart {
   padding-top: 150px;
   padding-right: 100px;
   background: #ebeff3;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 }
 
 .employee-heading {
@@ -300,10 +305,16 @@ section.pie-chart {
 .chartset-up {
   background: #fff;
   border-radius: 10px;
-  padding: 20px;
-  margin: 30px 40px;
+  padding: 40px 30px;
+  margin: 10px 12px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   text-align: center;
+  width: 495px;
+  height: 385px;
+}
+
+.appsetup h2 {
+  padding-bottom: 20px;
 }
 
 .lastest-leave-table table {
@@ -351,20 +362,21 @@ section.pie-chart {
 .admin-chart {
   padding-left: 380px;
   padding-top: 150px;
-  padding-right: 100px;
+  padding-right: 75px;
   background: #ebeff3;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 }
 
 .admin-heading {
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .custom-admin-box {
   background: #fff;
   border-radius: 10px;
   padding: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   display: flex;
 }
@@ -426,11 +438,11 @@ section.pie-chart {
 
 /*Admin Employee section*/
 .admin-employee-section {
-  padding-left: 300px;
+  padding-left: 380px;
   padding-top: 150px;
-  padding-right: 30px;
+  padding-right: 85px;
   background: #ebeff3;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 }
 .admin-employee-table table {
   border-collapse: collapse;
@@ -468,11 +480,11 @@ section.pie-chart {
   opacity: 1;
   transition: 0.4s ease all;
 }
-section.admin-leave-types {
+/* section.admin-leave-types {
   padding-left: 380px;
   padding-top: 130px;
   padding-right: 100px;
-} 
+}  */
 
 .admin-employee-table button:hover {
   border: 2px solid #001529;
@@ -503,9 +515,16 @@ section.admin-leave-types {
   overflow: hidden;
   padding-right: 100px;
   background: #ebeff3;
-  padding-left: 380px;
-  padding-bottom: 80px;
+  padding-left: 400px;
+  padding-bottom: 50px;
 }
+
+.add_employee_inner_frame h2 {
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+
 .add_employee .add_employee_inner_frame .ant-col.ant-col-4.ant-form-item-label.css-dev-only-do-not-override-byeoj0 {
   flex: 0 0 100%;
   max-width: 100%;
@@ -583,6 +602,7 @@ button.ant-btn.css-dev-only-do-not-override-byeoj0.ant-btn-default.cancel{
 .inner-admin-employee-frame .row {
   margin-bottom: 50px;
 }
+
 /*Employee Leave History*/
 
 .leave-history-frame {
@@ -590,11 +610,11 @@ button.ant-btn.css-dev-only-do-not-override-byeoj0.ant-btn-default.cancel{
   padding-top: 150px;
   padding-right: 100px;
   background: #ebeff3;
-  padding-bottom: 190px;
+  padding-bottom: 50px;
 }
 
 section.leave-history-frame h2 {
-  padding: 20px 0;
+  padding-bottom: 30px;
 }
 
 .employee-leave-history table {
@@ -623,15 +643,16 @@ section.leave-history-frame h2 {
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 /*Manage Leave Type*/
 
 .manage_leave_admin {
   padding-top: 150px;
   overflow: hidden;
-  padding-right: 30px;
+  padding-right: 85px;
   background: #ebeff3;
-  padding-left: 300px;
-  padding-bottom: 80px;
+  padding-left: 380px;
+  padding-bottom: 50px;
 }
 .manage_leave_admin .ant-col.ant-col-16.ant-col-offset-8.ant-form-item-control.css-dev-only-do-not-override-byeoj0 {
   margin: 0;
@@ -641,9 +662,7 @@ section.leave-history-frame h2 {
   flex: 0 0 100%;
 }
 .admin-l-manage h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 30px;
+  font-size: 30px;
 }
 
 button.close-circle-btn {
@@ -724,13 +743,47 @@ button.modal-btn {
   color: #001529 !important;
   border: 2px solid #001529 !important;
 }
+
+.manage_leave_admin :where(.css-dev-only-do-not-override-byeoj0).ant-form-item .ant-form-item-label >label {
+  font-size: 16px;
+}
+
+.manage_leave_admin .ant-col.ant-col-8.ant-form-item-label.css-dev-only-do-not-override-byeoj0 {
+  margin: 0 10px;
+}
+
+.manage_leave_admin .ant-row.ant-form-item-row.css-dev-only-do-not-override-byeoj0 {
+  width: 420px;
+}
+
+.manage_leave_admin .ant-form-item-control-input {
+  width: 265px;
+}
+
+.manage_leave_admin .ant-col.ant-col-16.ant-col-offset-8.ant-form-item-control.css-dev-only-do-not-override-byeoj0 {
+  margin-left: 50px !important;
+}
+
+section.manage_leave_admin .row {
+  margin-bottom: 10px;
+}
+
 /* Admin Leave Types */
 .admin-leave-types {
   padding-left: 380px;
   padding-top: 150px;
-  padding-right: 100px;
+  padding-right: 85px;
   background: #ebeff3;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
+}
+
+.employee-sec-heading h2 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.inner-admin-leave-frame .row {
+  margin-bottom: 50px;
 }
 
 .admin-leave-types-table table {
@@ -779,17 +832,18 @@ button.modal-btn {
 }
 
 .admin-leave-btn {
-  text-align: center;
-  padding: 30px;
+  text-align: right;
 }
 
 .admin-leave-btn a {
-  padding: 10px 30px;
-  border-radius: 5px;
-  background: #001529;
-  color: #fff;
-  border: 2px solid #001529;
+  font-size: 14px;
+  height: 100%;
+  padding: 10px 45px;
   text-decoration: none;
+  color: #fff;
+  background: #001529;
+  border: 2px solid #001529;
+  border-radius: 5px;
 }
 
 .admin-leave-btn a:hover {
@@ -801,20 +855,46 @@ button.modal-btn {
 
 .add_new_leave {
   padding-left: 380px;
-  padding-top: 150px;
-  padding-right: 100px;
+  padding-top: 190px;
+  padding-right: 88px;
   background: #ebeff3;
-  padding-bottom: 80px;
+  padding-bottom: 82px;
 }
 
+.add_new_leave_heading h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.add_new_leave form.ant-form.ant-form-horizontal.css-dev-only-do-not-override-byeoj0 {
+  background: #fff;
+  padding-top: 70px;
+  padding: 50px;
+  width: 100%;
+  border-radius: 18px;
+  max-width: 100% !important;
+}
+
+.add_new_leave .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 55px;
+  padding-top: 15px;
+}
 
 /*Manage Admin Section*/
 .manage-admin {
   padding-left: 380px;
   padding-top: 150px;
-  padding-right: 100px;
+  padding-right: 85px;
   background: #ebeff3;
-  padding-bottom: 260px;
+  padding-bottom: 281px;
+}
+
+.inner-admin-manage-frame .row {
+  margin-bottom: 50px;
 }
 
 .admin-mange-admin-table table {
@@ -863,17 +943,18 @@ button.modal-btn {
 }
 
 .add-mange-admin-btn {
-  text-align: center;
-  padding: 30px;
+  text-align: right;
 }
 
 .add-mange-admin-btn a {
-  padding: 10px 30px;
-  border-radius: 5px;
-  background: #001529;
-  color: #fff;
-  border: 2px solid #001529;
+  font-size: 14px;
+  height: 100%;
+  padding: 10px 45px;
   text-decoration: none;
+  color: #fff;
+  background: #001529;
+  border: 2px solid #001529;
+  border-radius: 5px;
 }
 
 .add-mange-admin-btn a:hover {
@@ -886,8 +967,30 @@ button.modal-btn {
 
 .add_new_admin {
   padding-left: 380px;
-  padding-top: 150px;
+  padding-top: 140px;
   padding-right: 100px;
   background: #ebeff3;
-  padding-bottom: 80px;
+  padding-bottom: 67px;
+}
+
+.add_new_admin_heading h2 {
+  font-size: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.add_new_admin form.ant-form.ant-form-horizontal.css-dev-only-do-not-override-byeoj0 {
+  max-width: 100% !important;
+  background: #fff;
+  padding: 50px;
+  padding-top: 70px;
+  border-radius: 18px;
+}
+
+.add_new_admin .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 65px;
+  padding-top: 15px;
 }
