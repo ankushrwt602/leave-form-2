@@ -1,51 +1,44 @@
 import React, { useState } from "react";
 // import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Checkbox, Form, Input, Select } from "antd";
+import { Checkbox, Form, Input, Select, notification } from "antd";
 import login_img from "../Assets/Images/login_img.gif";
 import { useNavigate } from "react-router-dom";
-import { LoginDropdown  , urlAfterLogin} from "../constant/constant";
+import { LoginDropdown, urlAfterLogin } from "../constant/constant";
 import axios from "axios";
-const {Option} = Select;
+const { Option } = Select;
 
 const LoginComponent = () => {
   let navigate = useNavigate();
   const onFinish = (values) => {
-    console.log("Received values of form: ", values);
-    const queryParams = new URLSearchParams({
-      LoginType: values.login_type,
-    }).toString();
-    // main/dashboard-employee
-    // if(values.login_type == 1){
-    //   navigate(`/dashboard-admin?${queryParams}`);
-    // }else{
-    //   navigate(``)
-    // }
-    localStorage.setItem("LoginType", values.login_type);
-    navigate(`${urlAfterLogin[values.login_type]}?${queryParams}`)
+    let obj = {
+      username: values.username,
+      password: values.password,
+      login_type: values.login_type,
+    };
+
+    axios
+      .post("http://localhost:5000/api/users/login", obj)
+      .then((response) => {
+        if (response.data.status == 200) {
+          const queryParams = new URLSearchParams({
+            LoginType: values.login_type,
+          }).toString();
+
+          localStorage.setItem("LoginType", values.login_type);
+          navigate(`${urlAfterLogin[values.login_type]}?${queryParams}`);
+        }
+      })
+      .catch((error) => {
+        console.error("AxiosError:", error);
+        notification.error({
+          message: error.response.data.message,
+        });
+      });
   };
+
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
-
-  function loginonsubmit(e){
-    e.preventDefault();
-    let obj = {
-      "username" : "vaishali@gmail.com",
-      "password" : 123456,
-      "login_type" :1
-      }
-      console.log(obj,'>>>>>>>>>>>>helloooo')
-
-     axios
-     .post("http://localhost:5000/api/users/login",obj)
-     .then(response => {
-      // Handle successful response
-      console.log(response,'<<<<<<<<<<pass');
-    })
-    .catch(error => {
-      console.error('AxiosError:', error);
-    });
-}
 
   return (
     <>
@@ -151,7 +144,7 @@ const LoginComponent = () => {
                       span: 16,
                     }}
                   >
-                    <button type="primary" htmlType="submit" onClick={loginonsubmit}>
+                    <button type="primary" htmlType="submit">
                       Login
                     </button>
                   </Form.Item>
