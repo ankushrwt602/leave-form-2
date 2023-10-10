@@ -22,7 +22,7 @@ function DashboardComponent() {
         width: 380,
         type: "pie",
       },
-      labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+      labels: ["Total Leave", "Team B", "Team C", "Team D", "Team E"],
       responsive: [
         {
           breakpoint: 480,
